@@ -1,0 +1,14 @@
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\bin\Debug\CabinetMedical.exe.config
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\bin\Debug\CabinetMedical.exe
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\bin\Debug\CabinetMedical.pdb
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.csproj.AssemblyReference.cache
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.Properties.Resources.resources
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.csproj.GenerateResource.cache
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.csproj.CoreCompileInputs.cache
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.exe
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.pdb
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.Main.resources
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.ReteteForm.resources
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.CabinetForm.resources
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.MediciForm.resources
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.PacientForm.resources
