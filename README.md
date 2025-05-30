@@ -1,1 +1,1 @@
-Windows Programming Applciation project for faculty
+Windows Programming Application(WPA) project for faculty
