@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -102,6 +104,66 @@ namespace CabinetMedical
             PacientForm pf = new PacientForm();
             pf.Show();
             this.Close();
+        }
+
+        private void tXTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "(*.txt)|*.txt";
+
+            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter sr = new StreamWriter(saveFileDialog1.FileName);
+
+                foreach(Cabinet c in cabinetList)
+                {
+                    sr.WriteLine(c.ToString());
+                }
+                sr.Close();
+                MessageBox.Show("Scriere cu succes!", "Scrierea a fost realizata cu succes", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Eroare!", "A avut loc o eroare!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); ;
+            }
+        }
+
+        private void bINToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "(*.bin)|*.bin";
+
+            if(saveFileDialog1.ShowDialog()== DialogResult.OK)
+            {
+                FileStream fs = new FileStream(saveFileDialog1.FileName, FileMode.Create);
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(fs, this);
+                fs.Close();
+                MessageBox.Show("Succes!", "Scrierea a fost realizata cu succes!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Eroare!","A avut loc o eroare!",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
+            }
+        }
+
+        private void tXTToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "(*.txt)}*.txt";
+
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader sr = new StreamReader(openFileDialog1.FileName);
+
+                textBox5.Text += sr.ReadToEnd();
+
+                sr.Close();
+                MessageBox.Show("Citire cu succes!", "Citirea a fost realizata cu succes!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Eroare!", "Citirea nu a fost realizata cu succes!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
         }
     }
 }

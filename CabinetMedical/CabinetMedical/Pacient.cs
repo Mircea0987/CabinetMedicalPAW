@@ -2,6 +2,7 @@
 
 namespace CabinetMedical
 {
+    [Serializable]
     internal class Pacient
     {
         private int id;

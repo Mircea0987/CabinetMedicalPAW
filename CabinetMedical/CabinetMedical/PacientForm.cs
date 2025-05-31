@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -74,6 +76,10 @@ namespace CabinetMedical
                 {
                     errorProvider1.SetError(textBox3, "CNP-ul trebuie să conțină exact 13 cifre.");
                 }
+                if(dataNasterii > DateTime.Now)
+                {
+                    errorProvider1.SetError(dateTimePicker1, "Data nasterii trebuie sa fie valida!");
+                }
 
                 Pacient p = new Pacient(dataNasterii, nume, prenume, cnp);
                 pacientList.Add(p);
@@ -103,6 +109,119 @@ namespace CabinetMedical
 
                 listView1.Items.Add(item);
 
+            }
+        }
+
+        private void gOBACKToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Main m = new Main();
+            m.Show();
+            this.Close();
+        }
+
+        private void cABINETToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            CabinetForm c = new CabinetForm();
+            c.Show();
+            this.Close();
+        }
+
+        private void mEDICIToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MediciForm mf = new MediciForm();
+            mf.Show();
+            this.Close();
+        }
+
+        private void rETETEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          ReteteForm rf = new ReteteForm();
+            rf.Show();
+            this.Close();
+        }
+
+        private void tXTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "(*.txt)|*.txt";
+
+            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+                StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
+
+                foreach(Pacient p in pacientList)
+                {
+                    sw.WriteLine(p.ToString());
+                }
+                sw.Close();
+                MessageBox.Show("Salvare a fost facuta!");
+            }
+            else
+            {
+                MessageBox.Show("Eroare","Salvare esuata",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
+            }
+        }
+
+        private void tXTToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "(*.txt)|*.txt";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader streamReader = new StreamReader(openFileDialog1.FileName);
+
+                textBox4.Text += streamReader.ReadToEnd() + Environment.NewLine;
+
+                streamReader.Close();
+                MessageBox.Show("Citirea a fost facuta!");
+            }
+            else
+            {
+                MessageBox.Show("Eroare!","Citire esuata!",MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+        }
+
+        private void bINToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "(*.bin)|*.bin";
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                FileStream fs = new FileStream(saveFileDialog1.FileName,FileMode.Create);
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(fs, pacientList);
+
+                fs.Close();
+                MessageBox.Show("Salvare reusita!");
+            }
+            else
+            {
+                MessageBox.Show("Eroare!", "Problema la salvare!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+        }
+
+        private void bINToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "(*.bin)|*.bin";
+
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                FileStream fs = new FileStream(openFileDialog1.FileName,FileMode.Open);
+                BinaryFormatter bf = new BinaryFormatter();
+                List<Pacient> pacientList =(List<Pacient>)bf.Deserialize(fs);
+
+                foreach (Pacient p in pacientList)
+                {
+                    textBox4.Text += p.ToString();
+                }
+
+                fs.Close();
+                MessageBox.Show("Citire reusita!","Citire efectuata cu succes!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Eroare!","Citire nereusita!",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
             }
         }
     }

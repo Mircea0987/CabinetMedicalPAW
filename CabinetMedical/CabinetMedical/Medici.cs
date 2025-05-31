@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace CabinetMedical
 {
+    [Serializable]
+
     internal class Medici : IMediciCount, IComparable<Medici>
     {
         public Medici() : base() {
@@ -76,12 +78,8 @@ namespace CabinetMedical
         {
             
             string mesaj =  $"Id = {Id} Secializare = {Specializare} Telefon = {Telefon}" +
-                $" Email = {Email} Cabinet Id = {CabinetId}" + base.ToString();
+                $" Email = {Email} Cabinet Id = {CabinetId}";
 
-            foreach(Medici m in mediciList)
-            {
-                mesaj = m.ToString();
-            }
             return mesaj;
         }
     }

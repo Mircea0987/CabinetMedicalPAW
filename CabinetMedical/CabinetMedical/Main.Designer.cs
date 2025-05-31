@@ -62,28 +62,28 @@
             // rETETEToolStripMenuItem
             // 
             this.rETETEToolStripMenuItem.Name = "rETETEToolStripMenuItem";
-            this.rETETEToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rETETEToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
             this.rETETEToolStripMenuItem.Text = "RETETE";
             this.rETETEToolStripMenuItem.Click += new System.EventHandler(this.rETETEToolStripMenuItem_Click);
             // 
             // cABINETToolStripMenuItem
             // 
             this.cABINETToolStripMenuItem.Name = "cABINETToolStripMenuItem";
-            this.cABINETToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cABINETToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
             this.cABINETToolStripMenuItem.Text = "CABINET";
             this.cABINETToolStripMenuItem.Click += new System.EventHandler(this.cABINETToolStripMenuItem_Click);
             // 
             // mEDICIToolStripMenuItem
             // 
             this.mEDICIToolStripMenuItem.Name = "mEDICIToolStripMenuItem";
-            this.mEDICIToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.mEDICIToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
             this.mEDICIToolStripMenuItem.Text = "MEDICI";
             this.mEDICIToolStripMenuItem.Click += new System.EventHandler(this.mEDICIToolStripMenuItem_Click);
             // 
             // pACIENTToolStripMenuItem
             // 
             this.pACIENTToolStripMenuItem.Name = "pACIENTToolStripMenuItem";
-            this.pACIENTToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pACIENTToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
             this.pACIENTToolStripMenuItem.Text = "PACIENT";
             this.pACIENTToolStripMenuItem.Click += new System.EventHandler(this.pACIENTToolStripMenuItem_Click);
             // 
@@ -91,6 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1362, 608);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CabinetMedical
 {
+    [Serializable]
     internal class Retete : IComparable<Retete>, ICloneable
     {
         public Retete()

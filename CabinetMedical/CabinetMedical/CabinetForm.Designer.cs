@@ -32,6 +32,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nAVIGATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gOBACKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mEDICIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rETETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pACIENTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,9 +51,15 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.mEDICIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rETETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pACIENTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.sALVAREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cITIREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tXTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bINToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +68,9 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nAVIGATEToolStripMenuItem});
+            this.nAVIGATEToolStripMenuItem,
+            this.sALVAREToolStripMenuItem,
+            this.cITIREToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1318, 28);
@@ -80,14 +91,35 @@
             // gOBACKToolStripMenuItem
             // 
             this.gOBACKToolStripMenuItem.Name = "gOBACKToolStripMenuItem";
-            this.gOBACKToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gOBACKToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.gOBACKToolStripMenuItem.Text = "GO BACK";
             this.gOBACKToolStripMenuItem.Click += new System.EventHandler(this.gOBACKToolStripMenuItem_Click);
+            // 
+            // mEDICIToolStripMenuItem
+            // 
+            this.mEDICIToolStripMenuItem.Name = "mEDICIToolStripMenuItem";
+            this.mEDICIToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+            this.mEDICIToolStripMenuItem.Text = "MEDICI";
+            this.mEDICIToolStripMenuItem.Click += new System.EventHandler(this.mEDICIToolStripMenuItem_Click);
+            // 
+            // rETETEToolStripMenuItem
+            // 
+            this.rETETEToolStripMenuItem.Name = "rETETEToolStripMenuItem";
+            this.rETETEToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+            this.rETETEToolStripMenuItem.Text = "RETETE";
+            this.rETETEToolStripMenuItem.Click += new System.EventHandler(this.rETETEToolStripMenuItem_Click);
+            // 
+            // pACIENTToolStripMenuItem
+            // 
+            this.pACIENTToolStripMenuItem.Name = "pACIENTToolStripMenuItem";
+            this.pACIENTToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+            this.pACIENTToolStripMenuItem.Text = "PACIENT";
+            this.pACIENTToolStripMenuItem.Click += new System.EventHandler(this.pACIENTToolStripMenuItem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(591, 72);
+            this.label1.Location = new System.Drawing.Point(623, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 16);
             this.label1.TabIndex = 1;
@@ -96,7 +128,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(594, 150);
+            this.label2.Location = new System.Drawing.Point(615, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 2;
@@ -105,7 +137,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(594, 211);
+            this.label3.Location = new System.Drawing.Point(615, 224);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 3;
@@ -114,7 +146,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(594, 284);
+            this.label4.Location = new System.Drawing.Point(605, 285);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 4;
@@ -150,9 +182,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(559, 364);
+            this.button1.Location = new System.Drawing.Point(533, 347);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 31);
             this.button1.TabIndex = 9;
             this.button1.Text = "Adauga";
             this.button1.UseVisualStyleBackColor = true;
@@ -160,9 +192,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(657, 364);
+            this.button2.Location = new System.Drawing.Point(676, 347);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 31);
             this.button2.TabIndex = 10;
             this.button2.Text = "Afiseaza";
             this.button2.UseVisualStyleBackColor = true;
@@ -179,7 +211,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(44, 72);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(277, 254);
+            this.listView1.Size = new System.Drawing.Size(403, 306);
             this.listView1.TabIndex = 11;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -205,32 +237,69 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // mEDICIToolStripMenuItem
+            // textBox5
             // 
-            this.mEDICIToolStripMenuItem.Name = "mEDICIToolStripMenuItem";
-            this.mEDICIToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.mEDICIToolStripMenuItem.Text = "MEDICI";
-            this.mEDICIToolStripMenuItem.Click += new System.EventHandler(this.mEDICIToolStripMenuItem_Click);
+            this.textBox5.Location = new System.Drawing.Point(864, 83);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(429, 295);
+            this.textBox5.TabIndex = 12;
             // 
-            // rETETEToolStripMenuItem
+            // sALVAREToolStripMenuItem
             // 
-            this.rETETEToolStripMenuItem.Name = "rETETEToolStripMenuItem";
-            this.rETETEToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.rETETEToolStripMenuItem.Text = "RETETE";
-            this.rETETEToolStripMenuItem.Click += new System.EventHandler(this.rETETEToolStripMenuItem_Click);
+            this.sALVAREToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tXTToolStripMenuItem,
+            this.bINToolStripMenuItem});
+            this.sALVAREToolStripMenuItem.Name = "sALVAREToolStripMenuItem";
+            this.sALVAREToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.sALVAREToolStripMenuItem.Text = "SALVARE";
             // 
-            // pACIENTToolStripMenuItem
+            // tXTToolStripMenuItem
             // 
-            this.pACIENTToolStripMenuItem.Name = "pACIENTToolStripMenuItem";
-            this.pACIENTToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.pACIENTToolStripMenuItem.Text = "PACIENT";
-            this.pACIENTToolStripMenuItem.Click += new System.EventHandler(this.pACIENTToolStripMenuItem_Click);
+            this.tXTToolStripMenuItem.Name = "tXTToolStripMenuItem";
+            this.tXTToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tXTToolStripMenuItem.Text = "TXT";
+            this.tXTToolStripMenuItem.Click += new System.EventHandler(this.tXTToolStripMenuItem_Click);
+            // 
+            // bINToolStripMenuItem
+            // 
+            this.bINToolStripMenuItem.Name = "bINToolStripMenuItem";
+            this.bINToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bINToolStripMenuItem.Text = "BIN";
+            this.bINToolStripMenuItem.Click += new System.EventHandler(this.bINToolStripMenuItem_Click);
+            // 
+            // cITIREToolStripMenuItem
+            // 
+            this.cITIREToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tXTToolStripMenuItem1,
+            this.bINToolStripMenuItem1});
+            this.cITIREToolStripMenuItem.Name = "cITIREToolStripMenuItem";
+            this.cITIREToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.cITIREToolStripMenuItem.Text = "CITIRE";
+            // 
+            // tXTToolStripMenuItem1
+            // 
+            this.tXTToolStripMenuItem1.Name = "tXTToolStripMenuItem1";
+            this.tXTToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.tXTToolStripMenuItem1.Text = "TXT";
+            this.tXTToolStripMenuItem1.Click += new System.EventHandler(this.tXTToolStripMenuItem1_Click);
+            // 
+            // bINToolStripMenuItem1
+            // 
+            this.bINToolStripMenuItem1.Name = "bINToolStripMenuItem1";
+            this.bINToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.bINToolStripMenuItem1.Text = "BIN";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // CabinetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1318, 503);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -278,6 +347,15 @@
         private System.Windows.Forms.ToolStripMenuItem mEDICIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rETETEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pACIENTToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ToolStripMenuItem sALVAREToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tXTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bINToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cITIREToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tXTToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem bINToolStripMenuItem1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

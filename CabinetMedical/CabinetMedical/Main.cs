@@ -15,6 +15,8 @@ namespace CabinetMedical
         public Main()
         {
             InitializeComponent();
+            this.Text = "Meniu Principal";
+            this.BackColor = ColorTranslator.FromHtml("#f0f0f0");
         }
 
         private void rETETEToolStripMenuItem_Click(object sender, EventArgs e)
