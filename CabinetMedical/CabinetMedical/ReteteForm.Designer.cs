@@ -29,12 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReteteForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nAVIGATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gOBACKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mEDICIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pACIENTIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cABINETToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sALVAREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cITIREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tXTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bINToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,12 +55,6 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.sALVAREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cITIREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tXTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.bINToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -88,30 +89,75 @@
             // gOBACKToolStripMenuItem
             // 
             this.gOBACKToolStripMenuItem.Name = "gOBACKToolStripMenuItem";
-            this.gOBACKToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gOBACKToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.gOBACKToolStripMenuItem.Text = "GO BACK";
             this.gOBACKToolStripMenuItem.Click += new System.EventHandler(this.gOBACKToolStripMenuItem_Click);
             // 
             // mEDICIToolStripMenuItem
             // 
             this.mEDICIToolStripMenuItem.Name = "mEDICIToolStripMenuItem";
-            this.mEDICIToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.mEDICIToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.mEDICIToolStripMenuItem.Text = "MEDICI";
             this.mEDICIToolStripMenuItem.Click += new System.EventHandler(this.mEDICIToolStripMenuItem_Click);
             // 
             // pACIENTIToolStripMenuItem
             // 
             this.pACIENTIToolStripMenuItem.Name = "pACIENTIToolStripMenuItem";
-            this.pACIENTIToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pACIENTIToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.pACIENTIToolStripMenuItem.Text = "PACIENTI";
             this.pACIENTIToolStripMenuItem.Click += new System.EventHandler(this.pACIENTIToolStripMenuItem_Click);
             // 
             // cABINETToolStripMenuItem
             // 
             this.cABINETToolStripMenuItem.Name = "cABINETToolStripMenuItem";
-            this.cABINETToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cABINETToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.cABINETToolStripMenuItem.Text = "CABINET";
             this.cABINETToolStripMenuItem.Click += new System.EventHandler(this.cABINETToolStripMenuItem_Click);
+            // 
+            // sALVAREToolStripMenuItem
+            // 
+            this.sALVAREToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tXTToolStripMenuItem,
+            this.bINToolStripMenuItem});
+            this.sALVAREToolStripMenuItem.Name = "sALVAREToolStripMenuItem";
+            this.sALVAREToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.sALVAREToolStripMenuItem.Text = "SALVARE";
+            // 
+            // tXTToolStripMenuItem
+            // 
+            this.tXTToolStripMenuItem.Name = "tXTToolStripMenuItem";
+            this.tXTToolStripMenuItem.Size = new System.Drawing.Size(117, 26);
+            this.tXTToolStripMenuItem.Text = "TXT";
+            this.tXTToolStripMenuItem.Click += new System.EventHandler(this.tXTToolStripMenuItem_Click);
+            // 
+            // bINToolStripMenuItem
+            // 
+            this.bINToolStripMenuItem.Name = "bINToolStripMenuItem";
+            this.bINToolStripMenuItem.Size = new System.Drawing.Size(117, 26);
+            this.bINToolStripMenuItem.Text = "BIN";
+            this.bINToolStripMenuItem.Click += new System.EventHandler(this.bINToolStripMenuItem_Click);
+            // 
+            // cITIREToolStripMenuItem
+            // 
+            this.cITIREToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tXTToolStripMenuItem1,
+            this.bINToolStripMenuItem1});
+            this.cITIREToolStripMenuItem.Name = "cITIREToolStripMenuItem";
+            this.cITIREToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.cITIREToolStripMenuItem.Text = "CITIRE";
+            // 
+            // tXTToolStripMenuItem1
+            // 
+            this.tXTToolStripMenuItem1.Name = "tXTToolStripMenuItem1";
+            this.tXTToolStripMenuItem1.Size = new System.Drawing.Size(117, 26);
+            this.tXTToolStripMenuItem1.Text = "TXT";
+            this.tXTToolStripMenuItem1.Click += new System.EventHandler(this.tXTToolStripMenuItem1_Click);
+            // 
+            // bINToolStripMenuItem1
+            // 
+            this.bINToolStripMenuItem1.Name = "bINToolStripMenuItem1";
+            this.bINToolStripMenuItem1.Size = new System.Drawing.Size(117, 26);
+            this.bINToolStripMenuItem1.Text = "BIN";
             // 
             // label1
             // 
@@ -216,51 +262,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // sALVAREToolStripMenuItem
-            // 
-            this.sALVAREToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tXTToolStripMenuItem,
-            this.bINToolStripMenuItem});
-            this.sALVAREToolStripMenuItem.Name = "sALVAREToolStripMenuItem";
-            this.sALVAREToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
-            this.sALVAREToolStripMenuItem.Text = "SALVARE";
-            // 
-            // cITIREToolStripMenuItem
-            // 
-            this.cITIREToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tXTToolStripMenuItem1,
-            this.bINToolStripMenuItem1});
-            this.cITIREToolStripMenuItem.Name = "cITIREToolStripMenuItem";
-            this.cITIREToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
-            this.cITIREToolStripMenuItem.Text = "CITIRE";
-            // 
-            // tXTToolStripMenuItem
-            // 
-            this.tXTToolStripMenuItem.Name = "tXTToolStripMenuItem";
-            this.tXTToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.tXTToolStripMenuItem.Text = "TXT";
-            this.tXTToolStripMenuItem.Click += new System.EventHandler(this.tXTToolStripMenuItem_Click);
-            // 
-            // bINToolStripMenuItem
-            // 
-            this.bINToolStripMenuItem.Name = "bINToolStripMenuItem";
-            this.bINToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.bINToolStripMenuItem.Text = "BIN";
-            this.bINToolStripMenuItem.Click += new System.EventHandler(this.bINToolStripMenuItem_Click);
-            // 
-            // tXTToolStripMenuItem1
-            // 
-            this.tXTToolStripMenuItem1.Name = "tXTToolStripMenuItem1";
-            this.tXTToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.tXTToolStripMenuItem1.Text = "TXT";
-            this.tXTToolStripMenuItem1.Click += new System.EventHandler(this.tXTToolStripMenuItem1_Click);
-            // 
-            // bINToolStripMenuItem1
-            // 
-            this.bINToolStripMenuItem1.Name = "bINToolStripMenuItem1";
-            this.bINToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.bINToolStripMenuItem1.Text = "BIN";
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(916, 70);
@@ -289,6 +290,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ReteteForm";
             this.Text = "ReteteForm";

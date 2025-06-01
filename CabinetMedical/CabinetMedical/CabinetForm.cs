@@ -165,5 +165,32 @@ namespace CabinetMedical
                 MessageBox.Show("Eroare!", "Citirea nu a fost realizata cu succes!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
+
+        private void dToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach(ListViewItem itm in listView1.Items)
+            {
+                itm.Remove();
+            }
+        }
+
+        private void listView1_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            if(e.Item.Checked)
+            {
+                e.Item.Remove();
+            }
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cHARTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CabinetFormChart cfr = new CabinetFormChart(cabinetList);
+            cfr.Show();
+        }
     }
 }

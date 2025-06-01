@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CabinetMedical
 {
-    internal class Cabinet : IComparable<Cabinet> , ICloneable
+    public class Cabinet : IComparable<Cabinet> , ICloneable
     {
         public Cabinet() { }
         public Cabinet(int id, string nume, string adresa, string telefon, int capacitate)

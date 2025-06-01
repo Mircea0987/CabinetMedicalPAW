@@ -224,6 +224,24 @@ namespace CabinetMedical
                 MessageBox.Show("Eroare!","Citire nereusita!",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
             }
         }
+
+        private void deleteAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+        }
+
+        private void listView1_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            if (e.Item.Checked)
+            {
+                listView1.Items.Clear();
+            }
+        }
+
+        private void listView1_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+
+        }
     }
 }
 

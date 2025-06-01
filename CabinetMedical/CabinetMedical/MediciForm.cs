@@ -72,7 +72,15 @@ namespace CabinetMedical
                     errorProvider1.SetError(textBox7, "CNP trebuie sa aiba 13 caractere!");
 
                 }
-                Medici m = new Medici(specializare,telefon, email,nume,prenume,CNP);
+
+                double salariul = double.Parse(textBox4.Text.Trim());
+
+                if(salariul<2500)
+                {
+                    errorProvider1.SetError(textBox4, "Salariul trebuie sa fie peste/egal cu salariul minim!");
+                }
+
+                Medici m = new Medici(specializare,telefon,email,nume,prenume,CNP,salariul);
 
                 mediciList.Add(m);
 
@@ -82,6 +90,7 @@ namespace CabinetMedical
                 textBox5.Clear();
                 textBox6.Clear();
                 textBox7.Clear();
+                textBox8.Clear();
 
             }
             catch (Exception ex)
@@ -102,6 +111,7 @@ namespace CabinetMedical
                 lvi.SubItems.Add(m.Nume);
                 lvi.SubItems.Add(m.Prenume);
                 lvi.SubItems.Add(m.CNP);
+                lvi.SubItems.Add(m.Salariul.ToString());
 
                 listView1.Items.Add(lvi);
             }
@@ -198,9 +208,9 @@ namespace CabinetMedical
                 FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open);
                 BinaryFormatter bf = new BinaryFormatter();
 
-                List<Medici> mediciList = (List<Medici>)bf.Deserialize(fs);
+                List<MediciForm> mediciList = (List<MediciForm>)bf.Deserialize(fs);
 
-                foreach(Medici m in mediciList)
+                foreach(MediciForm m in mediciList)
                 {
                     textBox8.Text+= m.ToString() + Environment.NewLine;
                 }
@@ -211,6 +221,13 @@ namespace CabinetMedical
             {
                 MessageBox.Show("Eroare!","Problema la citire!",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
             }
+        }
+
+        private void cHARTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MediciFormChart mfc = new MediciFormChart(mediciList);
+            mfc.Show();
+
         }
     }
 }

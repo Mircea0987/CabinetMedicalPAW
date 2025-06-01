@@ -8,9 +8,9 @@ namespace CabinetMedical
 {
     [Serializable]
 
-    internal class Medici : IMediciCount, IComparable<Medici>
+    public class Medici : IMediciCount, IComparable<Medici>
     {
-        public Medici() : base() {
+        public Medici() {
         
         } 
         public Medici(int id, string specializare, string telefon, string email, int cabinetId,
@@ -34,7 +34,7 @@ namespace CabinetMedical
 
         }
         public Medici(string specializare, string telefon, string email,
-             string nume, string prenume, string cNP)
+             string nume, string prenume, string cNP, double salariul)
         {
             Specializare = specializare;
             Telefon = telefon;
@@ -42,7 +42,7 @@ namespace CabinetMedical
             Nume = nume;
             Prenume = prenume;
             CNP = cNP;
-
+            Salariul = salariul;
         }
 
         public int Id { get; set; }
@@ -53,6 +53,7 @@ namespace CabinetMedical
         public string Nume {  get; set; }
         public string Prenume { get; set; }
         public string CNP { get; set; }
+        public double Salariul { get; set; }
 
         public List<Medici> mediciList;
 
