@@ -45,14 +45,18 @@ namespace CabinetMedical
                 if(nume.Length == 0)
                 {
                     errorProvider1.SetError(textBox1, "Numele trebuie sa fie valid!");
+                    return;
+
                 }
                 String[] medicamente = textBox2.Text.Split(',');
 
-                string medicamenteText = string.Join(",", medicamente); //BD nu stie sa faca conversia string[] => string
+                string medicamenteText = string.Join(",", medicamente);
 
                 if(medicamente.Length == 0)
                 {
                     errorProvider1.SetError(textBox2, "Medicamentele trebuie sa fie valide!");
+                    return;
+
                 }
 
                 DateTime dateEmitere = dateTimePicker1.Value.Date;

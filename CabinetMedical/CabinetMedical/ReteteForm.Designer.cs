@@ -43,6 +43,7 @@
             this.tXTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bINToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bAZADEDATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cHARTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.cHARTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -170,6 +170,13 @@
             this.bAZADEDATEToolStripMenuItem.Text = "BAZA DE DATE";
             this.bAZADEDATEToolStripMenuItem.Click += new System.EventHandler(this.bAZADEDATEToolStripMenuItem_Click);
             // 
+            // cHARTToolStripMenuItem
+            // 
+            this.cHARTToolStripMenuItem.Name = "cHARTToolStripMenuItem";
+            this.cHARTToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.cHARTToolStripMenuItem.Text = "CHART";
+            this.cHARTToolStripMenuItem.Click += new System.EventHandler(this.cHARTToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -250,7 +257,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(59, 70);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(346, 302);
+            this.listView1.Size = new System.Drawing.Size(347, 302);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -258,6 +265,7 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Nume";
+            this.columnHeader1.Width = 94;
             // 
             // columnHeader2
             // 
@@ -284,13 +292,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // cHARTToolStripMenuItem
-            // 
-            this.cHARTToolStripMenuItem.Name = "cHARTToolStripMenuItem";
-            this.cHARTToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
-            this.cHARTToolStripMenuItem.Text = "CHART";
-            this.cHARTToolStripMenuItem.Click += new System.EventHandler(this.cHARTToolStripMenuItem_Click);
             // 
             // ReteteForm
             // 

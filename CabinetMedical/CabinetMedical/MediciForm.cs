@@ -40,6 +40,8 @@ namespace CabinetMedical
                 if(specializare.Length == 0)
                 {
                     errorProvider1.SetError(textBox1, "Specializarea trebuie sa fie valida!");
+                    return;
+
                 }
 
                 string telefon = textBox2.Text;
@@ -47,12 +49,16 @@ namespace CabinetMedical
                 if(telefon.Length !=10)
                 {
                     errorProvider1.SetError(textBox2, "Telefonul trebuie sa fie valid (10 numere)");
+                    return;
+
                 }
                 string email = textBox3.Text;
                 
                 if(email.Length == 0)
                 {
                     errorProvider1.SetError(textBox3, "Email trebuie sa fie valid!");
+                    return;
+
                 }
 
                 string nume = textBox5.Text;
@@ -60,6 +66,8 @@ namespace CabinetMedical
                 if(nume.Length == 0)
                 {
                     errorProvider1.SetError(textBox5, "Numele trebuie sa fie valid!");
+                    return;
+
                 }
 
                 string prenume = textBox6.Text;
@@ -67,12 +75,16 @@ namespace CabinetMedical
                 if(prenume.Length == 0)
                 {
                     errorProvider1.SetError(textBox6, "Prenumele trebuie sa fie valid!");
+                    return;
+
                 }
 
                 string CNP = textBox7.Text;
                 if(CNP.Length !=13) {
 
                     errorProvider1.SetError(textBox7, "CNP trebuie sa aiba 13 caractere!");
+                    return;
+
 
                 }
 
@@ -81,6 +93,8 @@ namespace CabinetMedical
                 if(salariul<2500)
                 {
                     errorProvider1.SetError(textBox4, "Salariul trebuie sa fie peste/egal cu salariul minim!");
+                    return;
+
                 }
 
                 SqlCommand cmd = new SqlCommand("INSERT INTO medici(Specializare,Nume,Prenume," +

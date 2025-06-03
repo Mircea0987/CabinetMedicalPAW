@@ -50,7 +50,7 @@ namespace CabinetMedical
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Pentru a naviga folsoeste din meniu o sectiune!", "Salutare!", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+            MessageBox.Show("Pentru a naviga foloseste din meniu o sectiune!", "Salutare!", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
         }
 
         private void Main_Load(object sender, EventArgs e)

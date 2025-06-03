@@ -41,24 +41,32 @@ namespace CabinetMedical
                 if(nume.Length == 0)
                 {
                     errorProvider1.SetError(textBox1, "Numele trebuie sa fie valid!");
+                    return;
+
                 }
                 string adresa = textBox2.Text;
 
                 if(adresa.Length == 0)
                 {
                     errorProvider1.SetError(textBox2, "Adresa trebuie sa fie valida!");
+                    return;
+
                 }
                 string telefon = textBox3.Text;
 
                 if(telefon.Length == 0)
                 {
                     errorProvider1.SetError(textBox3, "Numarul de telefon trebuie sa fie valid!");
+                    return;
+
                 }
                 int capacitateCabinet = int.Parse(textBox4.Text);
 
                 if(capacitateCabinet == 0 && capacitateCabinet < 0)
                 {
                     errorProvider1.SetError(textBox4, "Capacitate trebuie sa fie valida!");
+                    return;
+
                 }
 
                 connection.Open();

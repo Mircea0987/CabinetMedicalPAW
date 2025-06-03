@@ -83,6 +83,22 @@ namespace CabinetMedical
 
             return mesaj;
         }
+        public static double operator+(Medici m1, Medici m2)
+        {
+            return m1.Salariul + m2.Salariul;
+        }
+        public static bool operator!=(Medici m1, Medici m2)
+        {
+            return !(m1 == m2);
+        }
+        public static bool operator==(Medici m1, Medici m2) {
+
+            if (m1.Id == m2.Id && m1.Email.Equals(m2.Email) && m1.CNP.Equals(m2.CNP) && m1.Nume.Equals(m2.Nume)
+                && m1.Prenume.Equals(m2.Prenume) && m1.Salariul == m2.Salariul && m1.Specializare.Equals(m2.Specializare)
+                && m1.Telefon.Equals(m2.Telefon)) return true;
+
+            return false;
+        
+        }
     }
 }
-//sipraincarcare oepratori 2 

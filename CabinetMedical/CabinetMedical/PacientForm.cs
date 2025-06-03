@@ -10,6 +10,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CabinetMedical
@@ -68,20 +69,27 @@ namespace CabinetMedical
                 if (string.IsNullOrWhiteSpace(nume))
                 {
                     errorProvider1.SetError(textBox1, "Introduceți un nume valid.");
+                    return;
                 }
 
                 if (string.IsNullOrWhiteSpace(prenume))
                 {
                     errorProvider1.SetError(textBox2, "Introduceți un prenume valid.");
+                    return;
+
                 }
 
                 if (cnp.Length != 13)
                 {
                     errorProvider1.SetError(textBox3, "CNP-ul trebuie să conțină exact 13 cifre.");
+                    return;
+
                 }
-                if(dataNasterii > DateTime.Now)
+                if (dataNasterii > DateTime.Now)
                 {
                     errorProvider1.SetError(dateTimePicker1, "Data nasterii trebuie sa fie valida!");
+                    return;
+
                 }
 
                 SqlCommand cmd = new SqlCommand("INSERT INTO Pacienti(nume_pacient,data_nasterii,prenume_pacient,CNP)" +

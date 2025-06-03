@@ -39,5 +39,17 @@ namespace CabinetMedical
         {
             return $"ID: {Id}, Nume: {Nume}, Prenume: {Prenume}, CNP: {CNP}, Data nașterii: {DataNasterii.ToShortDateString()}";
         }
+        public static bool operator !=(Pacient p1, Pacient p2)
+        {
+            return !(p1 == p2);
+        }
+        public static bool operator==(Pacient p1, Pacient p2)
+        {
+            if(p1.Nume.Equals(p2.name) && p1.Prenume.Equals(p2.Prenume) && p1.cnp.Equals(p2.cnp) && p1.dataNasterii == p2.dataNasterii)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

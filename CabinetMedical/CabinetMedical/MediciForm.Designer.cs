@@ -44,6 +44,7 @@
             this.tXTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bINToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cHARTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bAZEDEDATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -71,7 +72,6 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.bAZEDEDATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -187,6 +187,13 @@
             this.cHARTToolStripMenuItem.Text = "CHART";
             this.cHARTToolStripMenuItem.Click += new System.EventHandler(this.cHARTToolStripMenuItem_Click);
             // 
+            // bAZEDEDATEToolStripMenuItem
+            // 
+            this.bAZEDEDATEToolStripMenuItem.Name = "bAZEDEDATEToolStripMenuItem";
+            this.bAZEDEDATEToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.bAZEDEDATEToolStripMenuItem.Text = "BAZE DE DATE";
+            this.bAZEDEDATEToolStripMenuItem.Click += new System.EventHandler(this.bAZEDEDATEToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -250,7 +257,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 78);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(504, 294);
+            this.listView1.Size = new System.Drawing.Size(459, 294);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -258,6 +265,7 @@
             // columnHeader8
             // 
             this.columnHeader8.Text = "Specializare";
+            this.columnHeader8.Width = 90;
             // 
             // columnHeader9
             // 
@@ -378,13 +386,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 20;
-            // 
-            // bAZEDEDATEToolStripMenuItem
-            // 
-            this.bAZEDEDATEToolStripMenuItem.Name = "bAZEDEDATEToolStripMenuItem";
-            this.bAZEDEDATEToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
-            this.bAZEDEDATEToolStripMenuItem.Text = "BAZE DE DATE";
-            this.bAZEDEDATEToolStripMenuItem.Click += new System.EventHandler(this.bAZEDEDATEToolStripMenuItem_Click);
             // 
             // MediciForm
             // 
