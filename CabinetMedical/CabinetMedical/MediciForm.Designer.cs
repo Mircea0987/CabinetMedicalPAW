@@ -43,6 +43,7 @@
             this.cITIREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tXTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bINToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cHARTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,6 +57,7 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -69,8 +71,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cHARTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bAZEDEDATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +87,8 @@
             this.nAVIGATEToolStripMenuItem,
             this.sALVAREToolStripMenuItem,
             this.cITIREToolStripMenuItem,
-            this.cHARTToolStripMenuItem});
+            this.cHARTToolStripMenuItem,
+            this.bAZEDEDATEToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1398, 28);
@@ -107,28 +109,28 @@
             // gOBACKToolStripMenuItem
             // 
             this.gOBACKToolStripMenuItem.Name = "gOBACKToolStripMenuItem";
-            this.gOBACKToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gOBACKToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.gOBACKToolStripMenuItem.Text = "GO BACK";
             this.gOBACKToolStripMenuItem.Click += new System.EventHandler(this.gOBACKToolStripMenuItem_Click);
             // 
             // rETETEToolStripMenuItem
             // 
             this.rETETEToolStripMenuItem.Name = "rETETEToolStripMenuItem";
-            this.rETETEToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rETETEToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.rETETEToolStripMenuItem.Text = "RETETE";
             this.rETETEToolStripMenuItem.Click += new System.EventHandler(this.rETETEToolStripMenuItem_Click);
             // 
             // cABINETToolStripMenuItem
             // 
             this.cABINETToolStripMenuItem.Name = "cABINETToolStripMenuItem";
-            this.cABINETToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cABINETToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.cABINETToolStripMenuItem.Text = "CABINET";
             this.cABINETToolStripMenuItem.Click += new System.EventHandler(this.cABINETToolStripMenuItem_Click);
             // 
             // pACIENTIToolStripMenuItem
             // 
             this.pACIENTIToolStripMenuItem.Name = "pACIENTIToolStripMenuItem";
-            this.pACIENTIToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pACIENTIToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.pACIENTIToolStripMenuItem.Text = "PACIENTI";
             this.pACIENTIToolStripMenuItem.Click += new System.EventHandler(this.pACIENTIToolStripMenuItem_Click);
             // 
@@ -177,6 +179,13 @@
             this.bINToolStripMenuItem1.Size = new System.Drawing.Size(117, 26);
             this.bINToolStripMenuItem1.Text = "BIN";
             this.bINToolStripMenuItem1.Click += new System.EventHandler(this.bINToolStripMenuItem1_Click);
+            // 
+            // cHARTToolStripMenuItem
+            // 
+            this.cHARTToolStripMenuItem.Name = "cHARTToolStripMenuItem";
+            this.cHARTToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.cHARTToolStripMenuItem.Text = "CHART";
+            this.cHARTToolStripMenuItem.Click += new System.EventHandler(this.cHARTToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -269,6 +278,10 @@
             // columnHeader13
             // 
             this.columnHeader13.Text = "CNP";
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Salariul";
             // 
             // button1
             // 
@@ -366,16 +379,12 @@
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 20;
             // 
-            // columnHeader1
+            // bAZEDEDATEToolStripMenuItem
             // 
-            this.columnHeader1.Text = "Salariul";
-            // 
-            // cHARTToolStripMenuItem
-            // 
-            this.cHARTToolStripMenuItem.Name = "cHARTToolStripMenuItem";
-            this.cHARTToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
-            this.cHARTToolStripMenuItem.Text = "CHART";
-            this.cHARTToolStripMenuItem.Click += new System.EventHandler(this.cHARTToolStripMenuItem_Click);
+            this.bAZEDEDATEToolStripMenuItem.Name = "bAZEDEDATEToolStripMenuItem";
+            this.bAZEDEDATEToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.bAZEDEDATEToolStripMenuItem.Text = "BAZE DE DATE";
+            this.bAZEDEDATEToolStripMenuItem.Click += new System.EventHandler(this.bAZEDEDATEToolStripMenuItem_Click);
             // 
             // MediciForm
             // 
@@ -456,5 +465,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ToolStripMenuItem cHARTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bAZEDEDATEToolStripMenuItem;
     }
 }

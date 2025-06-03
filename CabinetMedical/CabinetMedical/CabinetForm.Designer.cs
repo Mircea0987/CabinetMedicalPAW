@@ -42,6 +42,8 @@
             this.cITIREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tXTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bINToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cHARTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bAZEDEDATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,16 +59,15 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.dToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cHARTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -76,7 +77,8 @@
             this.nAVIGATEToolStripMenuItem,
             this.sALVAREToolStripMenuItem,
             this.cITIREToolStripMenuItem,
-            this.cHARTToolStripMenuItem});
+            this.cHARTToolStripMenuItem,
+            this.bAZEDEDATEToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1318, 28);
@@ -166,6 +168,20 @@
             this.bINToolStripMenuItem1.Name = "bINToolStripMenuItem1";
             this.bINToolStripMenuItem1.Size = new System.Drawing.Size(117, 26);
             this.bINToolStripMenuItem1.Text = "BIN";
+            // 
+            // cHARTToolStripMenuItem
+            // 
+            this.cHARTToolStripMenuItem.Name = "cHARTToolStripMenuItem";
+            this.cHARTToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.cHARTToolStripMenuItem.Text = "CHART";
+            this.cHARTToolStripMenuItem.Click += new System.EventHandler(this.cHARTToolStripMenuItem_Click);
+            // 
+            // bAZEDEDATEToolStripMenuItem
+            // 
+            this.bAZEDEDATEToolStripMenuItem.Name = "bAZEDEDATEToolStripMenuItem";
+            this.bAZEDEDATEToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.bAZEDEDATEToolStripMenuItem.Text = "BAZE DE DATE";
+            this.bAZEDEDATEToolStripMenuItem.Click += new System.EventHandler(this.bAZEDEDATEToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -290,22 +306,6 @@
             this.columnHeader4.Text = "Capacitate";
             this.columnHeader4.Width = 80;
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(864, 83);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(429, 295);
-            this.textBox5.TabIndex = 12;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -321,12 +321,21 @@
             this.dToolStripMenuItem.Text = "Delete all";
             this.dToolStripMenuItem.Click += new System.EventHandler(this.dToolStripMenuItem_Click);
             // 
-            // cHARTToolStripMenuItem
+            // errorProvider1
             // 
-            this.cHARTToolStripMenuItem.Name = "cHARTToolStripMenuItem";
-            this.cHARTToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
-            this.cHARTToolStripMenuItem.Text = "CHART";
-            this.cHARTToolStripMenuItem.Click += new System.EventHandler(this.cHARTToolStripMenuItem_Click);
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(848, 86);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(429, 295);
+            this.textBox5.TabIndex = 12;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // CabinetForm
             // 
@@ -352,8 +361,8 @@
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,6 +404,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem dToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cHARTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bAZEDEDATEToolStripMenuItem;
     }
 }
 

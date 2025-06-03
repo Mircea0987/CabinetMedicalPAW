@@ -43,6 +43,7 @@
             this.aFISAREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tXTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bINToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bAZEDEDATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -63,6 +64,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.cHARTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -78,7 +80,9 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nAVIGATIONToolStripMenuItem,
             this.sALVAREToolStripMenuItem,
-            this.aFISAREToolStripMenuItem});
+            this.aFISAREToolStripMenuItem,
+            this.bAZEDEDATEToolStripMenuItem,
+            this.cHARTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1097, 28);
@@ -169,6 +173,13 @@
             this.bINToolStripMenuItem1.Size = new System.Drawing.Size(117, 26);
             this.bINToolStripMenuItem1.Text = "BIN";
             this.bINToolStripMenuItem1.Click += new System.EventHandler(this.bINToolStripMenuItem1_Click);
+            // 
+            // bAZEDEDATEToolStripMenuItem
+            // 
+            this.bAZEDEDATEToolStripMenuItem.Name = "bAZEDEDATEToolStripMenuItem";
+            this.bAZEDEDATEToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.bAZEDEDATEToolStripMenuItem.Text = "BAZE DE DATE";
+            this.bAZEDEDATEToolStripMenuItem.Click += new System.EventHandler(this.bAZEDEDATEToolStripMenuItem_Click);
             // 
             // listView1
             // 
@@ -322,6 +333,13 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // cHARTToolStripMenuItem
+            // 
+            this.cHARTToolStripMenuItem.Name = "cHARTToolStripMenuItem";
+            this.cHARTToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.cHARTToolStripMenuItem.Text = "CHART";
+            this.cHARTToolStripMenuItem.Click += new System.EventHandler(this.cHARTToolStripMenuItem_Click);
+            // 
             // PacientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -389,5 +407,7 @@
         private System.Windows.Forms.ToolStripMenuItem bINToolStripMenuItem1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem deleteAllToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bAZEDEDATEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cHARTToolStripMenuItem;
     }
 }

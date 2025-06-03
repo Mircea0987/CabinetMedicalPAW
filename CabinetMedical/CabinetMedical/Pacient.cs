@@ -3,7 +3,7 @@
 namespace CabinetMedical
 {
     [Serializable]
-    internal class Pacient
+    public class Pacient
     {
         private int id;
         private DateTime dataNasterii;

@@ -14,3 +14,8 @@ C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedic
 C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.PacientForm.resources
 C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.MediciFormChart.resources
 C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.CabinetFormChart.resources
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.CabinetFormBD.resources
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.MediciFormBD.resources
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.PacientFormBD.resources
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.ReteteFormBD.resources
+C:\Users\fedem\source\repos\CabinetMedical\CabinetMedical\obj\Debug\CabinetMedical.ReteteFormChart.resources

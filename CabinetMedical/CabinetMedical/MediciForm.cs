@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -15,6 +16,8 @@ namespace CabinetMedical
     public partial class MediciForm : Form
     {
         List<Medici> mediciList = new List<Medici> ();
+
+        SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=CabinetMedical;Integrated Security=True;Connect Timeout=30;Encrypt=False");
         public MediciForm()
         {
             InitializeComponent();
@@ -80,6 +83,23 @@ namespace CabinetMedical
                     errorProvider1.SetError(textBox4, "Salariul trebuie sa fie peste/egal cu salariul minim!");
                 }
 
+                SqlCommand cmd = new SqlCommand("INSERT INTO medici(Specializare,Nume,Prenume," +
+                    "CNP,email,salariul,telefon) VALUES(@specializare,@nume,@prenume,@CNP,@email,@salariul,@telefon)",connection);
+
+                connection.Open();
+
+                cmd.Parameters.AddWithValue("@specializare", specializare);
+                cmd.Parameters.AddWithValue("@nume",nume);
+                cmd.Parameters.AddWithValue("@prenume",prenume);
+                cmd.Parameters.AddWithValue("@CNP",CNP);
+                cmd.Parameters.AddWithValue("@email",email);
+                cmd.Parameters.AddWithValue("@salariul",salariul);
+                cmd.Parameters.AddWithValue("@telefon", telefon);
+
+                cmd.ExecuteNonQuery();
+
+                connection.Close();
+               
                 Medici m = new Medici(specializare,telefon,email,nume,prenume,CNP,salariul);
 
                 mediciList.Add(m);
@@ -228,6 +248,12 @@ namespace CabinetMedical
             MediciFormChart mfc = new MediciFormChart(mediciList);
             mfc.Show();
 
+        }
+
+        private void bAZEDEDATEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MediciFormBD mfbd = new MediciFormBD();
+            mfbd.Show();
         }
     }
 }

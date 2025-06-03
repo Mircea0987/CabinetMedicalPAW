@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -14,7 +15,10 @@ namespace CabinetMedical
 {
     public partial class CabinetForm : Form
     {
-        List<Cabinet> cabinetList = new List<Cabinet>();    
+        List<Cabinet> cabinetList = new List<Cabinet>();
+
+
+        SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=CabinetMedical;Integrated Security=True;Connect Timeout=30;Encrypt=False");
         public CabinetForm()
         {
             InitializeComponent();
@@ -56,13 +60,27 @@ namespace CabinetMedical
                 {
                     errorProvider1.SetError(textBox4, "Capacitate trebuie sa fie valida!");
                 }
+
+                connection.Open();
+                SqlCommand command = new SqlCommand("INSERT INTO Cabinete(nume,adresa,telefon,capacitate)" +
+                    "VALUES(@nume,@adresa,@telefon,@capacitate)",connection);
+
+                command.Parameters.AddWithValue("@nume", nume);
+                command.Parameters.AddWithValue("@adresa", adresa);
+                command.Parameters.AddWithValue("@telefon", telefon);
+                command.Parameters.AddWithValue("@capacitate", capacitateCabinet);
+                command.ExecuteNonQuery();
+                connection.Close();
+
                 Cabinet c = new Cabinet(nume, adresa, telefon, capacitateCabinet);
                 cabinetList.Add(c);
+
 
                 textBox1.Clear();
                 textBox2.Clear();
                 textBox3.Clear();
                 textBox4.Clear();
+
             }
             catch (Exception ex)
             {
@@ -191,6 +209,12 @@ namespace CabinetMedical
         {
             CabinetFormChart cfr = new CabinetFormChart(cabinetList);
             cfr.Show();
+        }
+
+        private void bAZEDEDATEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CabinetFormBD cfbd = new CabinetFormBD();
+            cfbd.Show();
         }
     }
 }

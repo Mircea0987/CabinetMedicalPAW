@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -15,6 +16,9 @@ namespace CabinetMedical
     public partial class ReteteForm : Form
     {
         List<Retete> reteList = new List<Retete>();
+
+        SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=CabinetMedical;Integrated Security=True;Connect Timeout=30;Encrypt=False");
+
         public ReteteForm()
         {
             InitializeComponent();
@@ -44,13 +48,27 @@ namespace CabinetMedical
                 }
                 String[] medicamente = textBox2.Text.Split(',');
 
+                string medicamenteText = string.Join(",", medicamente); //BD nu stie sa faca conversia string[] => string
+
                 if(medicamente.Length == 0)
                 {
                     errorProvider1.SetError(textBox2, "Medicamentele trebuie sa fie valide!");
                 }
 
                 DateTime dateEmitere = dateTimePicker1.Value.Date;
-                dateEmitere.ToShortTimeString();
+
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand("INSERT INTO Retete(nume_reteta,data_emitere," +
+                    "medicamente) VALUES(@nume_reteta,@data_emitere,@medicamente)", connection);
+
+                cmd.Parameters.AddWithValue("@nume_reteta", nume);
+                cmd.Parameters.AddWithValue("@data_emitere", dateEmitere);
+                cmd.Parameters.AddWithValue("@medicamente", medicamenteText);
+
+                cmd.ExecuteNonQuery();
+
+                connection.Close();
 
                 Retete r = new Retete(nume, dateEmitere, medicamente);
                 reteList.Add(r);
@@ -156,6 +174,18 @@ namespace CabinetMedical
             {
                 MessageBox.Show("Eroare!", "Eroare la citirea din fisier!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
+        }
+
+        private void bAZADEDATEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReteteFormBD rfbd = new ReteteFormBD();
+            rfbd.Show();
+        }
+
+        private void cHARTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReteteFormChart reteteFormChart = new ReteteFormChart(reteList);
+            reteteFormChart.Show();
         }
     }
 }

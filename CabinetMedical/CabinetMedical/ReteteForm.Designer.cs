@@ -42,6 +42,7 @@
             this.cITIREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tXTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bINToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bAZADEDATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,6 +59,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.cHARTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +70,9 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nAVIGATEToolStripMenuItem,
             this.sALVAREToolStripMenuItem,
-            this.cITIREToolStripMenuItem});
+            this.cITIREToolStripMenuItem,
+            this.bAZADEDATEToolStripMenuItem,
+            this.cHARTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1341, 28);
@@ -159,14 +163,21 @@
             this.bINToolStripMenuItem1.Size = new System.Drawing.Size(117, 26);
             this.bINToolStripMenuItem1.Text = "BIN";
             // 
+            // bAZADEDATEToolStripMenuItem
+            // 
+            this.bAZADEDATEToolStripMenuItem.Name = "bAZADEDATEToolStripMenuItem";
+            this.bAZADEDATEToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
+            this.bAZADEDATEToolStripMenuItem.Text = "BAZA DE DATE";
+            this.bAZADEDATEToolStripMenuItem.Click += new System.EventHandler(this.bAZADEDATEToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(598, 91);
+            this.label1.Location = new System.Drawing.Point(610, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 16);
+            this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Nume Pacientului";
+            this.label1.Text = "Nume Reteta";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
@@ -274,6 +285,13 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // cHARTToolStripMenuItem
+            // 
+            this.cHARTToolStripMenuItem.Name = "cHARTToolStripMenuItem";
+            this.cHARTToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.cHARTToolStripMenuItem.Text = "CHART";
+            this.cHARTToolStripMenuItem.Click += new System.EventHandler(this.cHARTToolStripMenuItem_Click);
+            // 
             // ReteteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -332,5 +350,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem bAZADEDATEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cHARTToolStripMenuItem;
     }
 }

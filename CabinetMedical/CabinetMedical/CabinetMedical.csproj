@@ -54,6 +54,12 @@
     <Compile Include="CabinetForm.Designer.cs">
       <DependentUpon>CabinetForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CabinetFormBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CabinetFormBD.Designer.cs">
+      <DependentUpon>CabinetFormBD.cs</DependentUpon>
+    </Compile>
     <Compile Include="CabinetFormChart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     <Compile Include="MediciForm.Designer.cs">
       <DependentUpon>MediciForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MediciFormBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MediciFormBD.Designer.cs">
+      <DependentUpon>MediciFormBD.cs</DependentUpon>
+    </Compile>
     <Compile Include="MediciFormChart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,12 @@
     <Compile Include="PacientForm.Designer.cs">
       <DependentUpon>PacientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PacientFormBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PacientFormBD.Designer.cs">
+      <DependentUpon>PacientFormBD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Retete.cs" />
@@ -96,8 +114,23 @@
     <Compile Include="ReteteForm.Designer.cs">
       <DependentUpon>ReteteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReteteFormBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReteteFormBD.Designer.cs">
+      <DependentUpon>ReteteFormBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReteteFormChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReteteFormChart.Designer.cs">
+      <DependentUpon>ReteteFormChart.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CabinetForm.resx">
       <DependentUpon>CabinetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CabinetFormBD.resx">
+      <DependentUpon>CabinetFormBD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CabinetFormChart.resx">
       <DependentUpon>CabinetFormChart.cs</DependentUpon>
@@ -108,11 +141,17 @@
     <EmbeddedResource Include="MediciForm.resx">
       <DependentUpon>MediciForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MediciFormBD.resx">
+      <DependentUpon>MediciFormBD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MediciFormChart.resx">
       <DependentUpon>MediciFormChart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PacientForm.resx">
       <DependentUpon>PacientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PacientFormBD.resx">
+      <DependentUpon>PacientFormBD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,6 +165,12 @@
     </Compile>
     <EmbeddedResource Include="ReteteForm.resx">
       <DependentUpon>ReteteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReteteFormBD.resx">
+      <DependentUpon>ReteteFormBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReteteFormChart.resx">
+      <DependentUpon>ReteteFormChart.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

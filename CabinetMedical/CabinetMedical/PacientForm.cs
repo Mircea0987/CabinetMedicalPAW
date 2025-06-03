@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace CabinetMedical
     public partial class PacientForm : Form
     {
         List<Pacient> pacientList = new List<Pacient>();
+
+        SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=CabinetMedical;Integrated Security=True;Connect Timeout=30;Encrypt=False");
         public PacientForm()
         {
             InitializeComponent();
@@ -80,6 +83,21 @@ namespace CabinetMedical
                 {
                     errorProvider1.SetError(dateTimePicker1, "Data nasterii trebuie sa fie valida!");
                 }
+
+                SqlCommand cmd = new SqlCommand("INSERT INTO Pacienti(nume_pacient,data_nasterii,prenume_pacient,CNP)" +
+                    "VALUES(@nume_pacient,@data_nasterii,@prenume_pacient,@CNP)", connection);
+
+
+                connection.Open();
+
+                cmd.Parameters.AddWithValue("@nume_pacient", nume);
+                cmd.Parameters.AddWithValue("@data_nasterii", dataNasterii);
+                cmd.Parameters.AddWithValue("@prenume_pacient", prenume);
+                cmd.Parameters.AddWithValue("@CNP", cnp);
+
+                cmd.ExecuteNonQuery();
+                
+                connection.Close();
 
                 Pacient p = new Pacient(dataNasterii, nume, prenume, cnp);
                 pacientList.Add(p);
@@ -239,6 +257,17 @@ namespace CabinetMedical
         }
 
         private void listView1_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+
+        }
+
+        private void bAZEDEDATEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PacientFormBD pacientFormBD = new PacientFormBD();
+            pacientFormBD.Show();
+        }
+
+        private void cHARTToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
