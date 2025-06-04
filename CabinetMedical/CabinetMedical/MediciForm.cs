@@ -15,7 +15,7 @@ namespace CabinetMedical
 {
     public partial class MediciForm : Form
     {
-        List<Medici> mediciList = new List<Medici> ();
+        BindingList<Medici> mediciList = new BindingList<Medici> ();
 
         SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=CabinetMedical;Integrated Security=True;Connect Timeout=30;Encrypt=False");
         public MediciForm()
